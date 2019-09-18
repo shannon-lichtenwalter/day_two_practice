@@ -179,7 +179,7 @@ const testData = [
 
 function enrollInSummerSchool(students) {
   students.forEach(item => (item.status = 'In Summer School'));
-  console.log(students);
+  return students;
 }
 
 const names2 = [
@@ -195,4 +195,23 @@ const names2 = [
   }
 ];
 
-enrollInSummerSchool(names2);
+// console.log(enrollInSummerSchool(names2));
+
+const scratchData = [
+  { id: 22, foo: 'bar' },
+  { id: 28, foo: 'bizz' },
+  { id: 19, foo: 'bazz' }
+];
+
+function findById(items, idNum) {
+  //   items.forEach(item => {
+  //     if (item.id === idNum) {
+  //       console.log(item);
+  //     }
+  //   });
+  // }
+
+  console.log(items.find(item => item.id === idNum));
+}
+
+findById(scratchData, 28);
