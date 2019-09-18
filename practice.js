@@ -25,16 +25,30 @@ const person = {
   }
 };
 
-person.greeting();
-person.year();
-person.greeting();
-person.year();
-person.greeting();
-person.year();
-person.greeting();
-person.year();
-person.greeting();
-person.year();
-person.greeting();
-person.year();
-person.greeting();
+// person.greeting();
+// person.year();
+// person.greeting();
+// person.year();
+// person.greeting();
+// person.year();
+// person.greeting();
+// person.year();
+// person.greeting();
+// person.year();
+// person.greeting();
+// person.year();
+// person.greeting();
+
+function createMyObject() {
+  const newObject = {
+    foo: 'bar',
+    answerToUniverse: 42,
+    'olly olly': 'oxen free',
+    sayHello: function() {
+      return 'hello';
+    }
+  };
+  return newObject;
+}
+
+console.log(createMyObject());
