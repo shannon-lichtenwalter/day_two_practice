@@ -51,4 +51,19 @@ function createMyObject() {
   return newObject;
 }
 
-console.log(createMyObject());
+// console.log(createMyObject());
+
+function updateObject(obj) {
+  obj.foo = 'foo';
+  obj.bar = 'bar';
+  obj.bizz = 'bizz';
+  obj.bang = 'bang';
+  return obj;
+}
+
+const example = {
+  cats: 'cats',
+  dogs: 'dogs'
+};
+
+console.log(updateObject(example));
