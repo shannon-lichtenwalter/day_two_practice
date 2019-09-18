@@ -157,6 +157,22 @@ const names = [
   }
 ];
 
-names.forEach(user => {
-  console.log(`${user.name} will be ${user.age + 1} in ${user.birthMonth}.`);
-});
+// names.forEach(user => {
+//   console.log(`${user.name} will be ${user.age + 1} in ${user.birthMonth}.`);
+// });
+
+function makeStudentReport(data) {
+  let result = [];
+  data.forEach(student => {
+    result.push(`${student.name}: ${student.grade}`);
+  });
+  console.log(result);
+}
+
+const testData = [
+  { name: 'Jane Doe', grade: 'A' },
+  { name: 'John Dough', grade: 'B' },
+  { name: 'Jill Do', grade: 'A' }
+];
+
+makeStudentReport(testData);
