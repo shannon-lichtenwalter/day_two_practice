@@ -214,4 +214,45 @@ function findById(items, idNum) {
   console.log(items.find(item => item.id === idNum));
 }
 
-findById(scratchData, 28);
+// findById(scratchData, 28);
+
+const objectA = {
+  age: 34,
+  id: 2,
+  city: 'Chicago',
+  name: 'Jane Doe'
+};
+
+// running the function with `objectB` and `expectedKeys`
+// should return `false`
+const objectB = {
+  id: 3,
+  age: 33,
+  city: 'Peoria'
+};
+
+const expectedKeys = ['id', 'name', 'age', 'city'];
+
+function validateKeys(object, expectedKeys) {
+  let keys = Object.keys(object);
+  if (keys.length !== expectedKeys.length) {
+    return false;
+  }
+
+  // if the objects contained the same keys
+  //but in a different order then the function would
+  //not work without sorting the arrays first before
+  //comparing the arrays by index locations.
+  keys.sort();
+  expectedKeys.sort();
+  for (let i = 0; i < expectedKeys.length; i++) {
+    if (expectedKeys[i] !== keys[i]) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+}
+
+console.log(validateKeys(objectA, expectedKeys));
+console.log(validateKeys(objectB, expectedKeys));
