@@ -1,15 +1,15 @@
 /* eslint-disable no-console */
-"use strict";
+'use strict';
 
 //object practice
 
 const person = {
-  name: "Joe",
+  name: 'Joe',
   age: 18,
-  job: "student",
+  job: 'student',
   greeting: function() {
     if (person.age > 22) {
-      person.job = "software engineer";
+      person.job = 'software engineer';
     }
     console.log(
       `Hi I'm ${this.name}. I am ${this.age} years old and I am a ${this.job}.`
@@ -41,11 +41,11 @@ const person = {
 
 function createMyObject() {
   const newObject = {
-    foo: "bar",
+    foo: 'bar',
     answerToUniverse: 42,
-    "olly olly": "oxen free",
+    'olly olly': 'oxen free',
     sayHello: function() {
-      return "hello";
+      return 'hello';
     }
   };
   return newObject;
@@ -54,23 +54,23 @@ function createMyObject() {
 // console.log(createMyObject());
 
 function updateObject(obj) {
-  obj.foo = "foo";
-  obj.bar = "bar";
-  obj.bizz = "bizz";
-  obj.bang = "bang";
+  obj.foo = 'foo';
+  obj.bar = 'bar';
+  obj.bizz = 'bizz';
+  obj.bang = 'bang';
   return obj;
 }
 
 const example = {
-  cats: "cats",
-  dogs: "dogs"
+  cats: 'cats',
+  dogs: 'dogs'
 };
 
 // console.log(updateObject(example));
 
 const person2 = {
-  firstName: "Paul",
-  lastName: "Jones",
+  firstName: 'Paul',
+  lastName: 'Jones',
   fullName: function() {
     console.log(`${this.firstName} ${this.lastName}`);
   }
@@ -85,10 +85,10 @@ function keyDeleter(obj) {
 }
 
 const sampleObj = {
-  foo: "foo",
-  bar: "bar",
-  bizz: "bizz",
-  bang: "bang"
+  foo: 'foo',
+  bar: 'bar',
+  bizz: 'bizz',
+  bang: 'bang'
 };
 
 // console.log(keyDeleter(sampleObj));
@@ -116,20 +116,47 @@ function mammal(name, eyes) {
       console.log(`Hello, I am a ${this.name} and I have ${this.numEyes} eyes`);
     },
     mutate: function() {
-      console.log("I am about to evole");
+      console.log('I am about to evole');
       this.numEyes++;
       console.log(`Now I have ${this.numEyes} eyes`);
     }
   };
 }
 
-console.log(mammal("tiger", 2));
-console.log(mammal("doggo", 4));
+// console.log(mammal("tiger", 2));
+// console.log(mammal("doggo", 4));
 
-const tiger = mammal("tiger", 2);
-const doggo = mammal("doggo", 4);
+// const tiger = mammal("tiger", 2);
+// const doggo = mammal("doggo", 4);
 
-tiger.greeting();
-tiger.mutate();
-doggo.greeting();
-doggo.mutate();
+// tiger.greeting();
+// tiger.mutate();
+// doggo.greeting();
+// doggo.mutate();
+
+const names = [
+  {
+    name: 'Bernard',
+    age: 29,
+    birthMonth: 'April'
+  },
+  {
+    name: 'Bernice',
+    age: 14,
+    birthMonth: 'December'
+  },
+  {
+    name: 'Gerard',
+    age: 88,
+    birthMonth: 'June'
+  },
+  {
+    name: 'Stella',
+    age: 3,
+    birthMonth: 'September'
+  }
+];
+
+names.forEach(user => {
+  console.log(`${user.name} will be ${user.age + 1} in ${user.birthMonth}.`);
+});
