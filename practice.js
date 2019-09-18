@@ -175,4 +175,24 @@ const testData = [
   { name: 'Jill Do', grade: 'A' }
 ];
 
-makeStudentReport(testData);
+// makeStudentReport(testData);
+
+function enrollInSummerSchool(students) {
+  students.forEach(item => (item.status = 'In Summer School'));
+  console.log(students);
+}
+
+const names2 = [
+  {
+    name: 'Tim',
+    status: 'Current student',
+    course: 'Biology'
+  },
+  {
+    name: 'Sue',
+    status: 'Withdrawn',
+    course: 'Mathematics'
+  }
+];
+
+enrollInSummerSchool(names2);
