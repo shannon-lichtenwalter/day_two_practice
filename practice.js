@@ -91,4 +91,16 @@ const sampleObj = {
   bang: 'bang'
 };
 
-console.log(keyDeleter(sampleObj));
+// console.log(keyDeleter(sampleObj));
+
+const pageViewCounts = {
+  homePage: 399,
+  aboutPage: 400,
+  termsOfService: 22
+};
+
+console.log(Object.keys(pageViewCounts));
+
+Object.keys(pageViewCounts).forEach(key => {
+  console.log(`the ${key} has ${pageViewCounts[key]} views.`);
+});
