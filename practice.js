@@ -1,15 +1,15 @@
 /* eslint-disable no-console */
-"use strict";
+'use strict';
 
 //object practice
 
 const person = {
-  name: "Joe",
+  name: 'Joe',
   age: 18,
-  job: "student",
+  job: 'student',
   greeting: function() {
     if (person.age > 22) {
-      person.job = "software engineer";
+      person.job = 'software engineer';
     }
     console.log(
       `Hi I'm ${this.name}. I am ${this.age} years old and I am a ${this.job}.`
@@ -41,11 +41,11 @@ const person = {
 
 function createMyObject() {
   const newObject = {
-    foo: "bar",
+    foo: 'bar',
     answerToUniverse: 42,
-    "olly olly": "oxen free",
+    'olly olly': 'oxen free',
     sayHello: function() {
-      return "hello";
+      return 'hello';
     }
   };
   return newObject;
@@ -54,26 +54,41 @@ function createMyObject() {
 // console.log(createMyObject());
 
 function updateObject(obj) {
-  obj.foo = "foo";
-  obj.bar = "bar";
-  obj.bizz = "bizz";
-  obj.bang = "bang";
+  obj.foo = 'foo';
+  obj.bar = 'bar';
+  obj.bizz = 'bizz';
+  obj.bang = 'bang';
   return obj;
 }
 
 const example = {
-  cats: "cats",
-  dogs: "dogs"
+  cats: 'cats',
+  dogs: 'dogs'
 };
 
 // console.log(updateObject(example));
 
 const person2 = {
-  firstName: "Paul",
-  lastName: "Jones",
+  firstName: 'Paul',
+  lastName: 'Jones',
   fullName: function() {
     console.log(`${this.firstName} ${this.lastName}`);
   }
 };
 
-person2.fullName();
+// person2.fullName();
+
+function keyDeleter(obj) {
+  delete obj.foo;
+  delete obj.bar;
+  return obj;
+}
+
+const sampleObj = {
+  foo: 'foo',
+  bar: 'bar',
+  bizz: 'bizz',
+  bang: 'bang'
+};
+
+console.log(keyDeleter(sampleObj));
